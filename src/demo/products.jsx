@@ -1,4 +1,4 @@
-
+//https://grafikart.fr/tutoriels/tp-react-liste-produit-1320
 
 import {SearchBar} from "../products/searchBar.jsx";
 import {ProductTable} from "../products/productTable.jsx";
