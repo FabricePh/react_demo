@@ -4,6 +4,7 @@ import {Hooks} from "./demo/hooks.jsx";
 import {Memoisation} from "./demo/memoisation.jsx";
 import {Portal} from "./demo/portal.jsx";
 import {Blog} from "./demo/blog.jsx";
+import {Reducer} from "./demo/reducer.jsx";
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
         {/*<Memoisation />*/}
         {/*<hr/>*/}
         {/*<Portal />*/}
-        <Blog />
+        {/*<Blog />*/}
+        <Reducer />
     </div>
 }
 
