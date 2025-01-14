@@ -5,7 +5,8 @@
  */
 export function PostRow({ slug, post }) {
     return (
-        <div className="card" style={{ width: "18rem" }}>
+        <div>
+        <div className="card">
             <img src={post.image} className="card-img-top" alt={post.title || "Image"} />
             <div className="card-body">
                 <h5 className="card-title">{post.title}</h5>
@@ -13,6 +14,7 @@ export function PostRow({ slug, post }) {
                     Go somewhere
                 </a>
             </div>
+        </div>
         </div>
     );
 }

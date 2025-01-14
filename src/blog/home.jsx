@@ -4,7 +4,7 @@ import {PostRow} from "./postRow.jsx";
 export function Home(){
     const rows = Object.entries(POSTS).map(([slug, post]) => (
         <PostRow key={slug} slug={slug} post={post} />
-  ));
+    ));
 
     return (
         <>
