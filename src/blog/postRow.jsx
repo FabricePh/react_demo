@@ -12,7 +12,7 @@ export function PostRow({ id, post }) {
 
     return (
         <div className="col-12 col-md-3">
-            <Card image={`https://picsum.photos/id/${id}/300/300`} title={post.title} description={post.description} href={`#post=${post.slug}`} />
+            <Card image={`https://picsum.photos/id/${id}/300/300`} title={post.title} description={post.description} href={`blog/${post.slug}`} />
         </div>
     );
 }

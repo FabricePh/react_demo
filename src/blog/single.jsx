@@ -1,13 +1,8 @@
 import { POSTS } from "./data.js";
-import {useTheme} from "../hooks/useTheme.jsx";
+import {useParams} from "react-router-dom";
 
-/**
- * Affiche un article unique basé sur son slug.
- *
- * @param {{ slug: string }} props
- */
-export default function Single({ slug }) {
-    console.log(POSTS, slug)
+export default function Single() {
+    const {slug} = useParams();
     // Récupère le post correspondant au slug
     const [id, post] = Object.entries(POSTS).find(([id, post]) => post.slug === slug) || [];
 
@@ -17,10 +12,12 @@ export default function Single({ slug }) {
     }
 
     return (
-        <div className="single-post">
-            <h1>{post.title}</h1>
-            <img src={`https://picsum.photos/id/${id}/300/300`} alt={post.title || "Image"} />
-            <p>{post.description}</p>
-        </div>
+        <>
+            <div className="single-post">
+                <h1>{post.title}</h1>
+                <img src={`https://picsum.photos/id/${id}/300/300`} alt={post.title || "Image"} />
+                <p>{post.description}</p>
+            </div>
+        </>
     );
 }

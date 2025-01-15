@@ -4,7 +4,6 @@ import {SearchBar} from "../products/searchBar.jsx";
 import {ProductTable} from "../products/productTable.jsx";
 import {PRODUCTS} from "../products/data.js";
 import {useState} from "react";
-import {Header} from "../ui/Header.jsx";
 
 export function Products() {
     const [showStockedOnly, setShowStockedOnly] = useState(false)
@@ -22,7 +21,6 @@ export function Products() {
     })
 
     return <div>
-        <Header />
         <h2>Produits</h2>
         <SearchBar search={search} onSearchChange={setSearch} showStockedOnly={showStockedOnly} onStockedOnlyChange={setShowStockedOnly}/>
         <ProductTable products={visibleProducts} />
