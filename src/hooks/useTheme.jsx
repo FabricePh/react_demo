@@ -32,7 +32,7 @@ export function ThemeContextProvider({ children }) {
 }
 
 export function ThemeSwitcher() {
-    const {toggleTheme} = useTheme();
+    const {toggleTheme, theme} = useTheme();
 
-    return <Button variant="info" onClick={toggleTheme}>Changer de thème</Button>
+    return <Button variant="info" onClick={toggleTheme}>Changer de thème : {theme}</Button>
 }

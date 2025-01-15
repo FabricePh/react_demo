@@ -1,5 +1,6 @@
 import {Checkbox} from "../forms/checkbox.jsx";
 import {useTodos} from "../hooks/useTodos.js";
+import {Header} from "../ui/Header.jsx";
 
 export function Reducer() {
     const todos = [
@@ -22,6 +23,7 @@ export function Reducer() {
     const {visibleTodos, showCompleted, toggleTodo, removeTodo, clearCompleted, toggleFilter} = useTodos(todos);
 
     return <div>
+        <Header />
         <Checkbox label="Afficher les tâches accomplies" checked={showCompleted} onChange={toggleFilter} />
         <ul className="list-group">
             {visibleTodos.map(todo => (

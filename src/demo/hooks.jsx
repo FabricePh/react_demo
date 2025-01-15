@@ -9,6 +9,7 @@ import {useToggle} from "../hooks/useToggle.js";
 import {useIncrement} from "../hooks/useIncrement.js";
 import {useDocumentTitle} from "../hooks/useDocumentTitle.js";
 import {useFetch} from "../hooks/useFetch.js";
+import {Header} from "../ui/Header.jsx";
 
 export function Hooks() {
     const [checked, toggleCheck] = useToggle();
@@ -20,7 +21,8 @@ export function Hooks() {
 
     const {loading, data, errors} = useFetch('https://jsonplaceholder.typicode.com/posts?_limit=10&_delay=5000');
 
-    return <div className="">
+    return <div>
+        <Header />
         <h2>Toogle</h2>
         <div className="hstack gap-3">
             <Checkbox label="Etat ?" checked={checked} onChange={toggleCheck} />

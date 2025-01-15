@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {Input} from "../forms/input.jsx";
+import {Header} from "../ui/Header.jsx";
 
 export function Duration({start = 0})
 {
@@ -28,6 +29,7 @@ export function Duration({start = 0})
 
     return (
     <div>
+        <Header />
         <h2>Gestion de temps</h2>
         <div className="hstack gap-2">
             <Input value={duration.toString()} onChange={handleChange} placeholder="Timer..." />

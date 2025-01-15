@@ -2,6 +2,7 @@ import useHashNavigation from "../hooks/useHashNavigation.jsx";
 import {NotFound} from "../blog/notFound.jsx";
 import {Home} from "../blog/home.jsx";
 import {lazy, Suspense} from "react";
+import {Header} from "../ui/Header.jsx";
 
 export function Blog() {
     const {page, param} = useHashNavigation();
@@ -9,6 +10,7 @@ export function Blog() {
 
     return (
         <>
+            <Header />
             <div className="container my-2">{pageContent}</div>
         </>
     )

@@ -2,6 +2,7 @@
 
 import {useState, memo, useCallback, useRef} from "react";
 import {Input} from "../forms/input.jsx";
+import {Header} from "../ui/Header.jsx";
 
 export function Memoisation() {
     const [name, setName] = useState("");
@@ -13,6 +14,7 @@ export function Memoisation() {
     }, []);
 
     return <div>
+        <Header />
         <Input type="text" value={name} onChange={setName}/>
         <div>
         Text : {name}
