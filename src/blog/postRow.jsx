@@ -1,20 +1,18 @@
+import {useContext} from "react";
+import {useTheme} from "../hooks/useTheme.jsx";
+import {Card} from "../ui/Card.jsx";
+
 /**
  * Ligne article dans une grille
  *
  * @param {{ slug: string, post: { title: string, image: string, description: string } }} props
  */
-export function PostRow({ slug, post }) {
+export function PostRow({ id, post }) {
+    const {theme} = useTheme()
+
     return (
-        <div>
-        <div className="card">
-            <img src={post.image} className="card-img-top" alt={post.title || "Image"} />
-            <div className="card-body">
-                <h5 className="card-title">{post.title}</h5>
-                <a href={`/#post=${slug}`} className="btn btn-primary">
-                    Go somewhere
-                </a>
-            </div>
-        </div>
+        <div className="col-12 col-md-3">
+            <Card image={`https://picsum.photos/id/${id}/300/300`} title={post.title} description={post.description} href={`#post=${post.slug}`} />
         </div>
     );
 }
